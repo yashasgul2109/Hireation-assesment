@@ -1,0 +1,35 @@
+.security-section {
+  width: 100%;
+  padding: 80px 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.security-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+/* Badge Row */
+.badges-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Each Badge */
+.badge img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.badge img:hover {
+  transform: scale(1.1);
+}

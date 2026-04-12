@@ -1,0 +1,164 @@
+.career-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.3rem;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  margin-left: 7rem;
+}
+
+.career-left {
+  flex: 1;
+}
+
+.career-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #ea580c;
+}
+
+.career-left p {
+  font-weight: bolder;
+  font-size: xx-large;
+  color: #374151;
+  
+}
+.career-left span {
+  font-size: x-large;
+  color: #100f0f;
+  
+}
+.tools-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.tool-item {
+  font-size: 0.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.demo-btn {
+  background: #ea580c;
+  color: #fff;
+  padding: 1.0rem 1.2rem;
+  border: none;
+  font-size: x-large;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.try-btn {
+  background: #ffffff;
+  color: #ea580c;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ea580c;
+  border-radius: 6px;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.career-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder {
+  width: 70%;
+  height: 300px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #6b7280;
+  font-weight: 600;
+}
+/* Right section alignment */
+.career-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  width: 85%;        /* 🔥 increased from 75% */
+  max-width: 600px;  /* keeps it clean on large screens */
+}
+
+.career-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+/* Allow right side to grow properly */
+.career-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORCE bigger width */
+.video-container {
+  width: 90%;          /* 🔥 now clearly bigger */
+  max-width: none;     /* 🔥 remove restriction */
+}
+
+/* Video */
+.career-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.tools-list {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1.5rem 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.tool-icon {
+  font-size: 25px;
+}
+
+.tool-label {
+  font-size: 25px;
+}
+
+.tools-list {
+  gap: 3.5rem;
+}
+
+.tool-item {
+  gap: 4px;
+}
+#label{
+  font-size: large;
+  font-weight: bold;
+}
+#ul{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

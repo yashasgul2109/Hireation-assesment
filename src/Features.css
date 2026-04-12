@@ -1,0 +1,92 @@
+/* Section */
+.features-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+/* Heading */
+.features-section h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+/* Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card */
+.feature-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.icon {
+  font-size: 40px;
+  color: #ff6a00;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.feature-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Button */
+.cta-btn {
+  margin-top: 50px;
+  padding: 12px 25px;
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #e55b00;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-section h2 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #0052cc;
+  --bg-soft: #f4f7fa;
+  --text-main: #333;
+  --text-muted: #666;
+  --border-color: #e0e0e0;
+}
+
+.booking-container {
+  display: flex;
+  background: #fff;
+  width: 100%;           /* Container width at 80% */
+  max-width: 950px;
+  min-height: 550px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+  /* This scales text, inputs, and buttons down to 80% */
+  zoom: 0.8; 
+  
+  /* Centers the container since width is now 80% */
+  margin: 0 auto; 
+}
+
+/* Left Panel */
+.info-panel {
+  flex: 1;
+  padding: 40px;
+  background: #fafbfc;
+  border-right: 1px solid var(--border-color);
+}
+
+.info-panel img { 
+  width: 130px; 
+  height: 25px;
+  object-fit: cover;
+  margin-bottom: 25px; 
+}
+
+.info-panel h2 { font-size: 24px; color: var(--text-main); margin-bottom: 10px; }
+.info-panel p { color: var(--text-muted); line-height: 1.6; }
+
+/* Right Panel */
+.scheduler-panel { flex: 2; padding: 40px; }
+.calendar-time-flex { display: flex; gap: 30px; }
+
+/* Calendar */
+.calendar-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+
+.day-label { font-size: 12px; font-weight: 700; color: #999; text-align: center; }
+.day-cell {
+  aspect-ratio: 1;
+  border: none;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s all;
+}
+
+.day-cell.upcoming { background: #f0f5ff; color: var(--primary-color); font-weight: 600; }
+.day-cell.upcoming:hover { background: var(--primary-color); color: #fff; }
+.day-cell.disabled { color: #ccc; cursor: not-allowed; background: #fdfdfd; }
+.day-cell.selected { background: var(--primary-color) !important; color: #fff !important; }
+
+/* Time Slots */
+.time-box { width: 200px; animation: fadeIn 0.3s ease; }
+.date-indicator { font-weight: 600; margin-bottom: 20px; font-size: 14px; }
+.time-list { display: flex; flex-direction: column; gap: 12px; }
+.time-cell {
+  padding: 12px;
+  border: 1.5px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.time-cell.active { background: var(--primary-color); color: #fff; }
+
+/* Form Design */
+.form-card { animation: fadeIn 0.4s ease; max-width: 400px; margin: 0 auto; }
+.details-summary { background: #f0f7ff; padding: 15px; border-radius: 8px; margin-bottom: 25px; font-size: 14px; }
+.input-group { margin-bottom: 18px; }
+.input-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text-main); }
+
+.input-group input, .input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-group input:focus { border-color: var(--primary-color); }
+.input-group textarea { height: 80px; resize: none; }
+
+.confirm-btn, .next-btn {
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.confirm-btn:hover { background: #333; }
+.back-link { display: block; margin: 15px auto; background: none; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer; font-size: 13px; }
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+  .booking-container { flex-direction: column; width: 100%; }
+  .info-panel { border-right: none; border-bottom: 1px solid var(--border-color); padding: 25px; }
+  .calendar-time-flex { flex-direction: column; }
+  .time-box { width: 100%; }
+  .scheduler-panel { padding: 25px; }
+  .day-cell { padding: 5px; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#img-para{
+  font-size: 13px;
+  font-weight: bold;
+}
