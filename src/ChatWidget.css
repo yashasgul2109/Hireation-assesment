@@ -1,0 +1,100 @@
+/* Container to fix position */
+.chat-widget-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  font-family: sans-serif;
+}
+
+/* Floating Button Style */
+.chat-trigger {
+  background-color: #ea580c; /* Orange */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.chat-trigger:hover {
+  background-color: #c2410c;
+  transform: scale(1.05);
+}
+
+/* Chat Card/Form Panel */
+.chat-card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+.chat-header {
+  background: #ea580c;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Form Styles */
+.chat-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-form input, 
+.chat-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline-color: #ea580c;
+}
+
+.submit-btn {
+  background: #ea580c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* Success Message */
+.success-message {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.check-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -11,6 +11,7 @@ import SuccessStories from "./SuccessStories";
 import SecurityBadges from "./SecurityBadges";
 import FeatureSection from "./FeatureSection"
 import TestimonialSlider from "./TestimonialSlider";
+import ChatWidget from "./ChatWidget";
 export default function App() {
   const [showScheduler, setShowScheduler] = useState(false);
 
@@ -25,6 +26,7 @@ export default function App() {
               <FeatureSection onConnect={() => setShowScheduler(true)} />
               <TestimonialSlider></TestimonialSlider>
             <ComparisonAndFAQ></ComparisonAndFAQ>
+            <ChatWidget></ChatWidget>
             
             <Footer></Footer>
       {showScheduler && (

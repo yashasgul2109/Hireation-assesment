@@ -73,7 +73,7 @@ const ToolSection = ({ data, reverse}) => {
   );
 };
 
-export default function ToolsSection() {
+export default function ToolsSection({onConnect}) {
   return (
     <div className="tools-wrapper">
       <h1 className="main-heading">
@@ -85,6 +85,7 @@ export default function ToolsSection() {
           key={index}
           data={item}
           reverse={index % 2 !== 0}
+          onConnect={onConnect}
         />
       ))}
     </div>
