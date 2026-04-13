@@ -4,7 +4,7 @@ import AICL from "./assets/AI-CL.webp";
 import interview from "./assets/p-interview.webp"
 import lo from "./assets/Linkedin-profile.webp"
 import AIE from "./assets/AI-Powered.webp"
-import CD from "./assets/Counseler Dashboard.webp"
+import CD from "./assets/Counseler.webp"
 
 const toolsData = [
   {
