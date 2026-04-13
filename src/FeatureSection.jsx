@@ -46,7 +46,7 @@ const toolsData = [
   }
 ];
 
-const ToolSection = ({ data, reverse}) => {
+const ToolSection = ({ data, reverse, onConnect}) => {
   return (
     <div className={`tool-section ${reverse ? "reverse" : ""}`}>
       

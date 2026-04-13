@@ -37,3 +37,68 @@
 .badge img:hover {
   transform: scale(1.1);
 }
+/* =========================
+   TABLET (≤ 1024px)
+========================= */
+@media (max-width: 1024px) {
+  .security-section {
+    width: 95%;
+    padding: 60px 20px;
+  }
+
+  .security-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .badges-container {
+    gap: 40px;
+  }
+
+  .badge img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+  .security-section {
+    width: 80%;
+    padding: 40px 15px;
+  }
+
+  .security-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .badges-container {
+    gap: 30px;
+  }
+
+  .badge img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+  .security-heading {
+    font-size: 24px;
+  }
+
+  .badges-container {
+    gap: 20px; /* Tighter gap so more badges fit on one line */
+  }
+
+  .badge img {
+    width: 70px;
+    height: 70px;
+  }
+}

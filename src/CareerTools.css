@@ -1,11 +1,13 @@
+/* --- Desktop Refinement --- */
 .career-tools {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.3rem;
-  padding: 2rem;
-  margin-top: 0.5rem;
-  margin-left: 7rem;
+  align-items: center; /* Center items for a cleaner look */
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1280px;  /* Align with standard navbar container */
+  margin: 0 auto;     /* Centers the container horizontally */
+  box-sizing: border-box;
 }
 
 .career-left {
@@ -14,95 +16,100 @@
 
 .career-left h1 {
   margin-bottom: 1rem;
-  font-size: 3rem;
-  font-weight: bolder;
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font sizing */
+  font-weight: 800;
   color: #ea580c;
+  line-height: 1.1;
 }
 
 .career-left p {
-  font-weight: bolder;
-  font-size: xx-large;
+  font-weight: 700;
+  font-size: 1.8rem;
   color: #374151;
-  
+  margin-bottom: 1rem;
 }
+
 .career-left span {
-  font-size: x-large;
-  color: #100f0f;
-  
+  font-size: 1.2rem;
+  color: #4b5563;
+  display: block;
 }
+
+/* --- Tools List --- */
 .tools-list {
-  list-style: none;
+  display: flex;
+  gap: 2.5rem;
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin: 3rem 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.tool-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit;        /* Keeps your original text colors */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;          /* Matches your existing spacing */
+  transition: transform 0.2s ease;
 }
 
+.tool-link:hover {
+  transform: translateY(-5px); /* Adds a nice little lift effect on hover */
+  color: #ea580c;             /* Changes text to orange on hover */
+}
+
+/* Ensure the li itself doesn't have the gap now that it's in the link */
 .tool-item {
-  font-size: 0.3rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
 }
 
+.tool-icon {
+  font-size: 2rem;
+  color: #ea580c;
+}
+
+.tool-label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* --- Buttons --- */
 .button-group {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .demo-btn {
   background: #ea580c;
   color: #fff;
-  padding: 1.0rem 1.2rem;
+  padding: 0.8rem 1.8rem;
   border: none;
-  font-size: x-large;
-  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .try-btn {
   background: #ffffff;
   color: #ea580c;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid #ea580c;
-  border-radius: 6px;
-  font-size: x-large;
+  padding: 0.8rem 1.8rem;
+  border: 2px solid #ea580c;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.career-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-placeholder {
-  width: 70%;
-  height: 300px;
-  background: #e5e7eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  color: #6b7280;
-  font-weight: 600;
-}
-/* Right section alignment */
-.career-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-container {
-  width: 85%;        /* 🔥 increased from 75% */
-  max-width: 600px;  /* keeps it clean on large screens */
-}
-
-.career-video {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-/* Allow right side to grow properly */
+/* --- Video Section --- */
 .career-right {
   flex: 1;
   display: flex;
@@ -110,95 +117,51 @@
   align-items: center;
 }
 
-/* FORCE bigger width */
 .video-container {
-  width: 90%;          /* 🔥 now clearly bigger */
-  max-width: none;     /* 🔥 remove restriction */
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Video */
 .career-video {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-}
-.tools-list {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 1.5rem 0;
-  list-style: none;
-  flex-wrap: wrap;
+  display: block;
 }
 
-.tool-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-.tool-icon {
-  font-size: 25px;
-}
-
-.tool-label {
-  font-size: 25px;
-}
-
-.tools-list {
-  gap: 3.5rem;
-}
-
-.tool-item {
-  gap: 4px;
-}
-#label{
-  font-size: large;
-  font-weight: bold;
-}
-#ul{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
 /* =========================
-   TABLET (≤ 1024px)
+   RESPONSIVE (≤ 1024px)
 ========================= */
 @media (max-width: 1024px) {
   .career-tools {
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px 20px;
-  }
-
-  .career-left,
-  .career-right {
-    width: 100%;
+    flex-direction: column-reverse; /* Video on top for mobile/tablet */
     text-align: center;
+    padding: 3rem 1.5rem;
+    margin: 0;
+    width: 100%;
   }
 
   .career-left h1 {
-    font-size: 28px;
-  }
-
-  .career-left p,
-  .career-left span {
-    font-size: 15px;
+    font-size: 2.5rem;
   }
 
   .tools-list {
     justify-content: center;
+    gap: 1.5rem;
   }
 
-  .video-container {
-    display: flex;
+  .button-group {
     justify-content: center;
   }
 
-  .career-video {
-    width: 90%;
-    max-width: 500px;
+  .career-right {
+    width: 100%;
+  }
+
+  .video-container {
+    max-width: 90%;
   }
 }
 
@@ -207,52 +170,26 @@
 ========================= */
 @media (max-width: 768px) {
   .career-tools {
-    padding: 30px 15px;
-  }
-
-  .career-left h1 {
-    font-size: 24px;
+    padding: 2rem 1rem;
   }
 
   .career-left p {
-    font-size: 14px;
-  }
-
-  .career-left span {
-    font-size: 13px;
-  }
-
-  .tools-list {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-
-  .tool-item {
-    width: 45%;
-  }
-
-  .tool-icon {
-    font-size: 22px;
-  }
-
-  .tool-label {
-    font-size: 13px;
+    font-size: 1.4rem;
   }
 
   .button-group {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    align-items: center;
   }
 
-  .demo-btn,
-  .try-btn {
+  .demo-btn, .try-btn {
     width: 100%;
+    max-width: 300px;
   }
 
-  .career-video {
-    width: 100%;
-    border-radius: 10px;
+  .tool-item {
+    width: 45%; /* Two per row on mobile */
   }
 }
 
@@ -261,20 +198,10 @@
 ========================= */
 @media (max-width: 480px) {
   .career-left h1 {
-    font-size: 20px;
+    font-size: 1.8rem;
   }
 
   .tool-item {
-    width: 100%;
-  }
-
-  .tool-label {
-    font-size: 12px;
-  }
-}
-/* MOBILE: video above text */
-@media (max-width: 768px) {
-  .career-tools {
-    flex-direction: column-reverse; /* 👈 THIS LINE DOES THE MAGIC */
+    width: 100%; /* Single column icons if very narrow */
   }
 }

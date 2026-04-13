@@ -1,6 +1,6 @@
 /* SECTION */
 .slider-section {
-  padding: 80px 20px;
+  padding: 80px;
   text-align: center;
   
 }
@@ -55,7 +55,7 @@
 
 /* CARD */
 .card {
-  min-width: calc(80% / 3);
+  min-width: calc(90% / 3);
   background: white;
   margin: 10px;
   padding: 25px;
@@ -107,23 +107,11 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .card {
-    min-width: 100%;
-  }
 
-  .left {
-    left: 5px;
-  }
-
-  .right {
-    right: 5px;
-  }
-}
 @media (max-width: 768px) {
   .card {
     min-width: 200px;
-    height: 140px;
+    height: 200px;
     padding: 15px;
   }
 

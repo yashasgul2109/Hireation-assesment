@@ -1,7 +1,9 @@
 .trusted-section {
-  padding: 3rem 2rem;
+  padding: 4rem 1rem; /* Reduced side padding for mobile */
   text-align: center;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .trusted-section h2 {
@@ -63,4 +65,69 @@
 }
 .marquee:hover .marquee-track {
   animation-play-state: paused;
+}
+@media (max-width: 1024px) {
+  .trusted-section h2 {
+    font-size: 36px;
+    margin-bottom: 2.5rem;
+  }
+
+  .trusted-card {
+    width: 180px;
+    height: 160px;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+   ========================= */
+@media (max-width: 768px) {
+  .trusted-section {
+    padding: 3rem 0; /* Full width for the marquee track */
+  }
+
+  .trusted-section h2 {
+    font-size: 28px;
+    margin-bottom: 2rem;
+    padding: 0 1rem; /* Keep text away from edges */
+  }
+
+  .marquee-track {
+    gap: 1rem; /* Tighter gap for smaller screens */
+    animation: scroll 30s linear infinite; /* Slightly faster for small screens */
+  }
+
+  .trusted-card {
+    width: 150px;
+    height: 140px;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .trusted-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .trusted-card p {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 480px)
+   ========================= */
+@media (max-width: 480px) {
+  .trusted-section h2 {
+    font-size: 22px;
+  }
+
+  .trusted-card {
+    width: 130px;
+    height: 120px;
+  }
+
+  .trusted-card p {
+    font-size: 14px;
+  }
 }

@@ -1,11 +1,11 @@
 /* ===== Wrapper ===== */
 .tools-wrapper {
   padding: 60px 20px;
-  width: 90%;
-  margin: auto;
-  margin: 70px;
+  max-width: 1200px; /* Instead of fixed width %, use max-width */
+  width: 100%;       /* Allow it to be 100% on small screens */
+  margin: 0 auto;    /* Centers the wrapper without extra side margins */
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
 }
-
 /* ===== Heading ===== */
 .main-heading {
   text-align: center;
@@ -19,7 +19,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 80px;
 }
 
 .tool-section.reverse {
@@ -75,15 +74,64 @@
   width: 100%;
   max-width: 400px;
 }
+@media (max-width: 1024px) {
+  .tools-wrapper {
+    width: 100%;
+    margin: 40px 0; /* Reduced top/bottom margin */
+    padding: 20px;
+  }
+  
+  .tool-section {
+    gap: 20px;
+  }
+}
 
-/* ===== Responsive ===== */
+/* Mobile (≤ 768px) */
 @media (max-width: 768px) {
   .tool-section {
-    flex-direction: column;
+    flex-direction: column !important; /* Force stack */
+    width: 100%;     /* Use full available width */
     text-align: center;
+    gap: 30px;
   }
 
-  .tool-section.reverse {
-    flex-direction: column;
+  .tool-text {
+    width: 100%;     /* Allow text to use full width */
+    padding: 0 10px;
+  }
+
+  .tool-image {
+    width: 100%;
+    order: -1;       /* Optional: Puts image ABOVE text on mobile */
+  }
+
+  .tool-image img {
+    max-width: 100%; /* Prevents image from overflowing */
+    height: auto;
+  }
+
+  .main-heading {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .tool-text h2 {
+    font-size: 22px;
+  }
+  
+  .tool-text ul li {
+    font-size: 15px;
+    text-align: left; /* Keep list items readable */
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .tools-wrapper {
+    padding: 10px;
+  }
+  
+  .cta-btn {
+    width: 100%; /* Full width button for easier tapping */
   }
 }

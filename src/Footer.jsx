@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "./assets/hiration_full_logo.webp";
+import logo from "./assets/logowhite.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

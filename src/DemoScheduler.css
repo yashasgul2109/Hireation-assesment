@@ -117,7 +117,7 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 850px) {
-  .booking-container { flex-direction: column; width: 100%; transform: scale(0.9);}
+  .booking-container { flex-direction: column; width: 100%; transform: scale(0.8);}
   .info-panel { border-right: none; border-bottom: 1px solid var(--border-color); padding: 25px; }
   .calendar-time-flex { flex-direction: column; }
   .time-box { width: 100%; }

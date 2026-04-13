@@ -4,10 +4,26 @@ import { FaFileAlt, FaUsers, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import videoMp4 from "./assets/video.mp4";
 
 const tools = [
-  { icon: <FaFileAlt />, label: <>Resume<br />Builder</> },
-  { icon: <FaUsers />, label: <>Interview<br />Practice</> },
-  { icon: <FaLinkedin />, label: <>LinkedIn<br />Optimizer</> },
-  { icon: <FaEnvelope />, label: <>Cover Letter<br />Builder</> },
+  { 
+    icon: <FaFileAlt />, 
+    label: <>Resume<br />Builder</>, 
+    link: "https://www.hiration.com/app/resume-builder/" // or a full URL
+  },
+  { 
+    icon: <FaUsers />, 
+    label: <>Interview<br />Practice</>, 
+    link: "https://www.hiration.com/app/video-interview-prep" 
+  },
+  { 
+    icon: <FaLinkedin />, 
+    label: <>LinkedIn<br />Optimizer</>, 
+    link: "https://www.hiration.com/app/linkedin-review" 
+  },
+  { 
+    icon: <FaEnvelope />, 
+    label: <>Cover Letter<br />Builder</>, 
+    link: "https://www.hiration.com/app/cover-letter" 
+  },
 ];
 
 function CareerTools({onConnect}) {
@@ -21,14 +37,16 @@ function CareerTools({onConnect}) {
           interview prep that builds student confidence.
         </span>
 
-        <ul className="tools-list" id = "ul">
-          {tools.map((tool, index) => (
-            <li key={index} className="tool-item">
-              <div className="tool-icon">{tool.icon}</div>
-              <span id="label" className="tool-label">{tool.label}</span>
-            </li>
-          ))}
-        </ul>
+        <ul className="tools-list" id="ul">
+  {tools.map((tool, index) => (
+    <li key={index} className="tool-item">
+      <a href={tool.link} className="tool-link">
+        <div className="tool-icon">{tool.icon}</div>
+        <span id="label" className="tool-label">{tool.label}</span>
+      </a>
+    </li>
+  ))}
+</ul>
 
         <div className="button-group">
           <button className="demo-btn" onClick={() => {

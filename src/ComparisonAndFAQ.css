@@ -1,9 +1,21 @@
 /* SECTION */
+* {
+  box-sizing: border-box;
+}
 .comparison-section {
   padding: 60px 20px;
   text-align: center;
 }
-
+#backend-img {
+  width: 100% !important;
+  max-width: 100vw !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* This stops the "zoom out" ghosting */
+  padding: 20px 0;
+  margin: 0 auto;
+}
 .comparison-section h2 {
   font-size: 40px;
   margin-bottom: 10px;
@@ -132,4 +144,106 @@
     text-align: center;
     font-weight: bolder;
     font-size: x-large;
+}
+@media (max-width: 1024px) {
+  .comparison-section h2 {
+    font-size: 32px;
+  }
+  
+  .table {
+    width: 95%; 
+    max-width: 100%; /* Prevents it from ever exceeding screen */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ensure sections don't cause horizontal overflow */
+  .comparison-section, .faq-section {
+    padding: 40px 15px;
+    width: 100%;
+    overflow-x: hidden; /* Safety net */
+  }
+
+  .comparison-section h2, .faq-section h2 {
+    font-size: 26px;
+  }
+
+  /* TABLE TRANSFORMATION */
+  .table {
+    width: 100%;
+    border: none; /* Remove border on mobile to save space */
+  }
+
+  .table-row.header {
+    display: none;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    border-bottom: 2px solid #eee;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .table-row div {
+    border-top: none;
+    padding: 8px 10px; /* Reduced side padding */
+    text-align: left;
+    width: 100%;
+    word-wrap: break-word; /* Prevents long words from pushing width */
+  }
+
+  /* Labels */
+  .table-row div:nth-child(2)::before {
+    content: "Traditional: ";
+    font-weight: bold;
+    display: block;
+    color: #888;
+    font-size: 12px;
+  }
+
+  .table-row div:nth-child(3)::before {
+    content: "Hiration: ";
+    font-weight: bold;
+    display: block;
+    color: orange;
+    font-size: 12px;
+  }
+
+  .bold {
+    font-size: 18px;
+    background: #fdf2f0;
+    display: block;
+    width: 100% !important;
+  }
+
+  /* FAQ */
+  .faq-section {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .faq-item button {
+    font-size: 15px;
+    padding: 12px; /* Smaller padding */
+  }
+}
+
+#backend-img img {
+  max-width: 180px; /* Limits size on big screens */
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+/* 3. Mobile Specific constraint */
+@media (max-width: 768px) {
+  #backend-img img {
+    max-width: 140px; /* Smaller for mobile */
+  }
+  
+  #backend-text {
+    font-size: 1.2rem !important;
+    padding: 0 10px;
+  }
 }
