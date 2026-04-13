@@ -142,6 +142,7 @@
   .navbar {
     justify-content: center; /* Center everything on mobile */
     gap: 15px;
+    position: relative;
   }
 
   .button-group {
