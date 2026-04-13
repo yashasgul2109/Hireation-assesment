@@ -10,14 +10,14 @@
   display: flex;
   background: #fff;
   width: 100%;           /* Container width at 80% */
-  max-width: 950px;
+  width: 1100px;
   min-height: 550px;
   border-radius: 20px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   
   /* This scales text, inputs, and buttons down to 80% */
-  zoom: 0.85; 
+  zoom: 0.8; 
   
   /* Centers the container since width is now 80% */
   margin: 0 auto; 

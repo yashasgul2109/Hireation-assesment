@@ -39,7 +39,7 @@ const DemoSceduler = () => {
   };
 
   return (
-    <div className="booking-wrapper">
+    
       <div className="booking-container">
         {/* Left Side: Info */}
         <div className="info-panel">
@@ -139,7 +139,6 @@ const DemoSceduler = () => {
           )}
         </div>
       </div>
-    </div>
   );
 };
 
