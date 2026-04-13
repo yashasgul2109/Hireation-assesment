@@ -17,10 +17,11 @@
   overflow: hidden;
   
   /* This scales text, inputs, and buttons down to 80% */
-  zoom: 0.8; 
+  zoom: 0.85; 
   
   /* Centers the container since width is now 80% */
   margin: 0 auto; 
+  position: relative;
 }
 
 /* Left Panel */
@@ -117,13 +118,32 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 850px) {
-  .booking-container { flex-direction: column; width: 100%; transform: scale(0.6);}
-  .info-panel { border-right: none; border-bottom: 1px solid var(--border-color); padding: 25px; transform: 0.8;}
-  .calendar-time-flex { flex-direction: column; }
-  .time-box { width: 100%; }
-  .scheduler-panel { padding: 25px; }
-  .day-cell { padding: 5px; }
-  
+  .booking-container {
+    flex-direction: row;       /* ✅ keep horizontal */
+    width: 150%;
+    overflow-x: auto;          /* ✅ allow horizontal scroll if needed */
+    zoom: 1;                   /* ❌ remove scaling issues */
+  }
+
+  .info-panel {
+    min-width: 250px;          /* ✅ prevent shrinking too much */
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+    border-bottom: none;
+  }
+
+  .scheduler-panel {
+    min-width: 500px;          /* ✅ keeps calendar readable */
+    padding: 20px;
+  }
+
+  .calendar-time-flex {
+    flex-direction: row;       /* ✅ keep calendar + time side-by-side */
+  }
+
+  .time-box {
+    width: 180px;
+  }
 }
 
 @keyframes fadeIn {
