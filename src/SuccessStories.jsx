@@ -217,7 +217,7 @@ const SuccessStories = ({onConnect}) => {
       {/* Pagination Dots */}
       <div className="sc-dots-wrapper">
         {allStoriesData.map((_, index) => (
-          <div 
+          <div
             key={index} 
             className={`sc-dot ${index === currentIndex ? 'active' : ''}`}
             onClick={() => setCurrentIndex(index)} 

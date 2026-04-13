@@ -116,7 +116,7 @@ useEffect(() => {
     }
   };
 
-  handleResize(); // run once
+  handleResize();
   window.addEventListener("resize", handleResize);
 
   return () => window.removeEventListener("resize", handleResize);
