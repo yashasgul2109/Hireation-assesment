@@ -19,6 +19,7 @@
 
 /* Logo section */
 .logo-container img {
+  padding-top: 10px;
   height: 2.7rem;
   object-fit: contain;
 }
