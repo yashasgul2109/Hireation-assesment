@@ -117,12 +117,13 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 850px) {
-  .booking-container { flex-direction: column; width: 100%; }
+  .booking-container { flex-direction: column; width: 100%; transform: scale(0.9);}
   .info-panel { border-right: none; border-bottom: 1px solid var(--border-color); padding: 25px; }
   .calendar-time-flex { flex-direction: column; }
   .time-box { width: 100%; }
   .scheduler-panel { padding: 25px; }
   .day-cell { padding: 5px; }
+  
 }
 
 @keyframes fadeIn {
@@ -132,4 +133,50 @@
 #img-para{
   font-size: 13px;
   font-weight: bold;
+}
+.calendar-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.calendar-nav h4 {
+  text-align: center;
+}
+.calendar-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the heading */
+}
+
+/* Center text perfectly */
+.calendar-nav h4 {
+  margin: 0;
+  text-align: center;
+}
+
+/* LEFT ARROW */
+.calendar-nav .nav-btn:first-of-type {
+  position: absolute;
+  left: 0;
+}
+
+/* RIGHT ARROW */
+.calendar-nav .nav-btn:last-of-type {
+  position: absolute;
+  right: 0;
+}
+
+/* Arrow styling */
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

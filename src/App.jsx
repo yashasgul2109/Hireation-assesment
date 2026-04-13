@@ -22,7 +22,7 @@ export default function App() {
           <Features onConnect={() => setShowScheduler(true)} />
             <SuccessStories onConnect={() => setShowScheduler(true)} />
               <SecurityBadges></SecurityBadges>
-              <FeatureSection></FeatureSection>
+              <FeatureSection onConnect={() => setShowScheduler(true)} />
               <TestimonialSlider></TestimonialSlider>
             <ComparisonAndFAQ></ComparisonAndFAQ>
             

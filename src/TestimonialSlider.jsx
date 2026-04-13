@@ -1,5 +1,23 @@
 import React, { useState } from "react";
 import "./TestimonialSlider.css";
+import fairmont from "./assets/review5.webp";
+import fairmont1 from "./assets/fairmont.webp";
+import hofstra from "./assets/review6.webp";
+import hofstra1 from "./assets/hofstra1.webp";
+import must from "./assets/logo3.webp";
+import must1 from "./assets/must.webp";
+import augusta from "./assets/review7.png";
+import augusta1 from "./assets/augusta.webp";
+import rasmussen1 from "./assets/review2.png";
+import rasmussen from "./assets/rasmussen1.webp";
+import gavanize1 from "./assets/review3.png";
+import gavanize from "./assets/gavanize.webp";
+import tech1 from "./assets/logo2.webp";
+import tech from "./assets/tech1.webp";
+import monmouth from "./assets/review1.png";
+import monmouth1 from "./assets/monmouth1.webp";
+import xi from "./assets/review4.png";
+import xi1 from "./assets/xi1.webp";
 
 export default function TestimonialSlider() {
   const [index, setIndex] = useState(0);
@@ -11,8 +29,8 @@ export default function TestimonialSlider() {
       name: "Susan Rodriguez",
       role: "Senior Director",
       org: "Fairmont State University",
-      image: "/images/user1.jpg",
-      logo: "/images/logo1.png"
+      image: fairmont1,
+      logo: fairmont
     },
     {
       id: 2,
@@ -20,8 +38,8 @@ export default function TestimonialSlider() {
       name: "Patrick Holton",
       role: "Executive Director",
       org: "Hofstra University",
-      image: "/images/user2.jpg",
-      logo: "/images/logo2.png"
+      image: hofstra1,
+      logo: hofstra
     },
     {
       id: 3,
@@ -29,10 +47,62 @@ export default function TestimonialSlider() {
       name: "Nate Marsh",
       role: "Director",
       org: "Must Ministries",
-      image: "/images/user3.jpg",
-      logo: "/images/logo3.png"
+      image: must1,
+      logo: must
     },
-    // 👉 Add up to 9 like this
+    {
+      id: 4,
+      text: "Our partnership with Hiration has transformed student resumes, I highly recommend them",
+      name: "Sharn Vericella",
+      role: "Assistant Director, Career Services",
+      org: "Augusta University",
+      image: augusta1,
+      logo: augusta
+    },
+     {
+      id: 5,
+      text: "With over 3,000 resumes created, Hiration is boosting student confidence & success rates.",
+      name: "Stephanie Daniels",
+      role: "Senior Career Service Advisor",
+      org: "Rasmussen University",
+      image: rasmussen,
+      logo: rasmussen1
+    }, {
+      id: 6,
+      text: "Superior customer service & innovative updates from Hiration have elevated our career services.",
+      name: "Crew Spence",
+      role: "Director of Career Services & Partnership",
+      org: "Galvanize",
+      image: gavanize,
+      logo: gavanize1
+    },
+    {
+      id: 7,
+      text: "Hiration enhanced our students' interviewing skills, impressing employers & increasing job placements.",
+      name: "Sarah Horner",
+      role: "Director, Standards & Technology",
+      org: "Tech Elevator",
+      image: tech,
+      logo: tech1
+    },
+    {
+      id: 8,
+      text: "Hiration’s responsiveness to continually improve the platform positively impacts our resume review process.",
+      name: "Mariagrazia Buttitta",
+      role: "Career Devlopment",
+      org: "Monmouth University",
+      image: monmouth1,
+      logo: monmouth
+    },
+    {
+      id: 9,
+      text: "Hiration has revolutionized employment transitions with seamless, personalized, AI-driven resume guidance.",
+      name: "Cyril",
+      role: "Chief Academy Officer",
+      org: "Academy Xi",
+      image: xi1,
+      logo: xi
+    }
   ];
 
   const visibleCards = 3;

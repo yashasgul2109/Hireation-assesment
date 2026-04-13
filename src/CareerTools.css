@@ -162,3 +162,119 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+/* =========================
+   TABLET (≤ 1024px)
+========================= */
+@media (max-width: 1024px) {
+  .career-tools {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .career-left,
+  .career-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .career-left h1 {
+    font-size: 28px;
+  }
+
+  .career-left p,
+  .career-left span {
+    font-size: 15px;
+  }
+
+  .tools-list {
+    justify-content: center;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .career-video {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+/* =========================
+   MOBILE (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+  .career-tools {
+    padding: 30px 15px;
+  }
+
+  .career-left h1 {
+    font-size: 24px;
+  }
+
+  .career-left p {
+    font-size: 14px;
+  }
+
+  .career-left span {
+    font-size: 13px;
+  }
+
+  .tools-list {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .tool-item {
+    width: 45%;
+  }
+
+  .tool-icon {
+    font-size: 22px;
+  }
+
+  .tool-label {
+    font-size: 13px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .demo-btn,
+  .try-btn {
+    width: 100%;
+  }
+
+  .career-video {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+  .career-left h1 {
+    font-size: 20px;
+  }
+
+  .tool-item {
+    width: 100%;
+  }
+
+  .tool-label {
+    font-size: 12px;
+  }
+}
+/* MOBILE: video above text */
+@media (max-width: 768px) {
+  .career-tools {
+    flex-direction: column-reverse; /* 👈 THIS LINE DOES THE MAGIC */
+  }
+}

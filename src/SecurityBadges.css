@@ -1,8 +1,12 @@
 .security-section {
-  width: 100%;
+  width: 90%;
   padding: 80px 40px;
   text-align: center;
   background: #fff;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .security-heading {
@@ -23,8 +27,8 @@
 
 /* Each Badge */
 .badge img {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
