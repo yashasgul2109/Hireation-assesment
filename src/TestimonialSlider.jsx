@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import "./TestimonialSlider.css";
 import fairmont from "./assets/review5.webp";
 import fairmont1 from "./assets/fairmont.webp";
@@ -105,19 +105,35 @@ export default function TestimonialSlider() {
     }
   ];
 
-  const visibleCards = 3;
+  const [visibleCards, setVisibleCards] = useState(3);
 
-  const next = () => {
-    if (index < testimonials.length - visibleCards) {
-      setIndex(index + 1);
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth <= 768) {
+      setVisibleCards(1); // 📱 mobile
+    } else {
+      setVisibleCards(3); // 💻 desktop
     }
   };
+
+  handleResize(); // run once
+  window.addEventListener("resize", handleResize);
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+const next = () => {
+  setIndex((prev) =>
+    prev >= testimonials.length - visibleCards ? 0 : prev + 1
+  );
+};
 
   const prev = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    }
-  };
+  if (index === 0) {
+    setIndex(testimonials.length - visibleCards); // 🔥 go to end
+  } else {
+    setIndex(index - 1);
+  }
+};
 
   return (
     <div className="slider-section">
